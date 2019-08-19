@@ -285,6 +285,9 @@ namespace vcsn
       /// Worklist of state tuples.
       std::deque<std::pair<state_name_t, state_t>> todo_;
     };
+
+    template <Automaton Aut, Automaton... Auts>
+    constexpr typename tuple_automaton_impl<Aut, Auts...>::indices_t tuple_automaton_impl<Aut, Auts...>::indices;
   }
 
   /// A tuple automaton as a shared pointer.
