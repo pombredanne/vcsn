@@ -130,7 +130,7 @@ namespace vcsn
 
       /// The list of automaton indices as a static list.
       using indices_t = vcsn::detail::make_index_sequence<sizeof...(Auts)>;
-      static constexpr indices_t indices{};
+      static inline constexpr indices_t indices{};
 
       /// The sname of the sub automata.
       template <typename... T>
